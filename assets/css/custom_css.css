@@ -1,0 +1,56 @@
+    .dropdown-menu{
+        height:auto;
+        overflow-y:auto;
+    }
+        .sidenav {
+          border-radius: 10px;
+          width: 50px;
+          position: fixed;
+          z-index: 1;
+          top: 220px;
+          right: 0px;
+          background: #fff!important;
+          overflow-x: hidden;
+          padding: 5px 0;
+        }
+
+        .sidenav button {
+/*          padding: 6px 8px 6px 16px;*/
+          display: block;
+        }
+
+        .sidenav button:hover {
+          color: #064579;
+        }
+
+        table td {
+/*        border: solid 1px #666;
+        width: 110px;*/
+        word-wrap: break-word;
+      }
+
+        .tableFixHead{ 
+            overflow: auto; height: 384px; 
+        }
+        .tableFixHead thead th { 
+            position: sticky; top: 0; z-index: 1; 
+        }
+
+        table  { 
+            border-collapse: collapse; width: 100%; 
+        }
+        th, td { 
+            padding: 8px 16px; 
+        }
+        th     {
+         background:#eee; 
+     }
+
+    .table.dataTable th,
+    .table.dataTable td {
+            font-size: 12px; /* Adjust the font size as needed */
+     }
+
+/*        .table-hover{
+          font-size: 8px;
+        }*/

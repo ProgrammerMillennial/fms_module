@@ -1,0 +1,100 @@
+/* -------------------- tabbed content using CSS Grid
+
+-- allows for unlimited tabs/content blocks without additional configuration
+
+*/
+.products-wrapper {
+  margin: 20px;
+}
+.products-wrapper .tabs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+  grid-template-rows: minmax(-webkit-max-content, -webkit-min-content);
+  grid-template-rows: minmax(max-content, min-content);
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+.products-wrapper .tabs-wrapper .tab-item {
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  width: auto;
+  height: auto;
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.products-wrapper .tabs-wrapper .tab-item img {
+  height: auto;
+  max-height: 128px;
+  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.5));
+}
+.products-wrapper .tabs-wrapper .tab-item:hover img {
+  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.2));
+}
+@media screen and (min-width: 600px) {
+  .products-wrapper .tabs-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-wrapper .tabs-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.products-wrapper .tabbed-content {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+.products-wrapper .tabbed-content .item-content {
+  width: 100%;
+  display: none;
+  grid-auto-rows: repeat(auto-fit, minmax(auto, -webkit-max-content));
+  grid-auto-rows: repeat(auto-fit, minmax(auto, max-content));
+  grid-gap: 2rem;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.products-wrapper .tabbed-content .item-content.active {
+  display: grid;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+.products-wrapper .tabbed-content .item-content .highlights {
+  padding: 1rem;
+}
+.products-wrapper .tabbed-content .item-content .highlights:hover, .products-wrapper .tabbed-content .item-content .highlights:focus {
+  background-color: rgba(0, 0, 255, 0.2);
+  border-radius: 2rem;
+  transition: all 0.5s ease-out;
+}
+.products-wrapper .tabbed-content .item-content .highlights p {
+  margin: auto;
+}
+@media screen and (min-width: 600px) {
+  .products-wrapper .tabbed-content .item-content {
+/*    grid-template-columns: repeat(2, 1fr);*/
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .products-wrapper {
+    margin: 6rem;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .products-wrapper {
+    margin: 5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-wrapper {
+/*    margin: 7rem;*/
+  }
+}
+@media screen and (min-width: 1800px) {
+  .products-wrapper {
+    margin: 10rem;
+  }
+}
